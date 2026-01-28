@@ -36,9 +36,54 @@ window.addEventListener("load", () => {
     .join("");
 });
 
-
 luxy.init({
   wrapper: "#luxy",
   targets: ".luxy-el",
   wrapperSpeed: 0.08,
+});
+
+const partner_swiper = new Swiper(".partner-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  loop: true,
+  speed: 8000,
+  freeMode: true,
+  freeModeMomentum: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    // pauseOnMouseEnter: true ,
+  },
+  centeredSlides: true,
+  allowTouchMove: false,
+  simulateTouch: false,
+  grabCursor: false,
+  // roundLengths: true,
+  // observer: true,
+  // observeParents: true,
+
+  // breakpoints: {
+  //   1700: {
+  //     spaceBetween: 80,
+  //   },
+  //   1250: {
+  //     spaceBetween: 40,
+  //   },
+  // },
+});
+
+const Gallery_Swiper = new Swiper(".our-gallery-swiper", {
+  loop: true,
+  centeredSlides: false,
+  slidesPerView: 1,
+  autoplay: true,
+  speed: 1000,
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      autoplay: false,
+    },
+  },
 });
