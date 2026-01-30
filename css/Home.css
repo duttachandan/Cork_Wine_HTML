@@ -1,0 +1,213 @@
+/* Banner Section */
+
+.banner-whole {
+  padding: 0 0 100px;
+  background: var(--bg-black);
+}
+
+.banner-sec {
+  min-height: 100vh;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/Hero-Section.png") no-repeat left/cover;
+}
+
+.banner-wrpr-section {
+  position: relative;
+}
+
+.banner-wrpr {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.banner-wrpr .title1 {
+  margin: 30px 0;
+}
+
+.subtitle > span {
+  display: inline-block;
+}
+
+.banner-sec .primary-btn {
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  animation: rotationInfinite 8000ms linear infinite;
+}
+
+@keyframes rotationInfinite {
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2rem;
+  transform-origin: 0 100px;
+}
+
+.partner-hdr {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-top: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.partner-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.partner-swiper .swiper-slide {
+  width: 143px;
+}
+
+.parnter-img {
+  width: 100%;
+}
+
+.parnter-img > img {
+  width: 100%;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Winery Section */
+
+.winer-sec {
+  padding: 120px 0;
+}
+
+.winer-sec .row {
+  margin: 0 calc(-120px / 2) 120px;
+}
+
+.winer-sec .row > * {
+  padding: 0 calc(120px / 2);
+}
+
+.winer-sec .title2 {
+  margin: 30px 0;
+}
+
+.winer-sml-img {
+  max-width: 654px;
+  margin: 0 auto;
+}
+
+.winer-main-img {
+  max-width: 793px;
+  margin: 0 auto;
+}
+
+.about-content {
+  margin: 30px 0;
+}
+
+.counter-winer-sec {
+  display: flex;
+}
+
+.counter-winer-sec > * {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-winer-sec > .counter:first-child,
+.counter-winer-sec > .counter:nth-child(2) {
+  position: relative;
+}
+
+.counter-winer-sec > .counter:first-child::after,
+.counter-winer-sec > .counter:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  right: 0;
+  background: var(--primary-color);
+}
+
+/* Our Gallery Section */
+
+.our-gallery-sec {
+  padding: 120px 0;
+  text-align: center;
+  background: var(--bg-black);
+}
+
+.our-gallery-sec .subtitle {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.our-gallery-sec .title2 {
+  max-width: 800px;
+  color: var(--text-color);
+  margin: 0 auto;
+}
+
+.our-gallery-sec .title2 span {
+  color: var(--primary-color);
+}
+
+.our-gallery-hdr {
+  margin-bottom: 80px;
+}
+
+.our-gallery-sec .swiper-slide img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.our-gallery-sec .swiper-slide .gallery-img {
+  max-width: 722px;
+  margin: 0 auto;
+  transition: 0.5s linear;
+}
+
+.our-gallery-sec .swiper-slide .gallery-img {
+  transform: scaleY(0.8);
+}
+
+.our-gallery-sec .swiper-slide.swiper-slide-active .gallery-img {
+  transform: scaleY(1.1);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  /* Banner Section */
+  .banner-sec {
+    background-position: center;
+  }
+  /* Winery Section */
+  .row .col-12:first-child {
+    margin-bottom: 60px;
+  }
+}
