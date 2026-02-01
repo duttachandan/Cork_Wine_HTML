@@ -9,6 +9,11 @@ a {
   --text-color: #fff;
   --bg-black: #000;
   --primary-color: #c1a372;
+  --golden-color: #6a4f2c;
+}
+
+.container {
+  max-width: 1704px;
 }
 
 ul,
