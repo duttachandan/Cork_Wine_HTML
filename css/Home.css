@@ -37,6 +37,7 @@
 
 .subtitle > span {
   display: inline-block;
+  color: var(--text-color);
 }
 
 .banner-sec .primary-btn {
@@ -165,6 +166,30 @@
   color: var(--golden-color);
   margin-right: 30px;
   font-family: "Castoro Titling", serif;
+}
+
+/* Duskwine Products Section */
+
+.duskwine-sec {
+  padding: 120px 0;
+}
+
+.duskwine-img {
+  max-width: 558px;
+  margin: 0 auto;
+}
+
+.duskwine-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.price {
+  font-size: 40px;
+  font-family: "Castoro Titling", serif;
+  color: var(--maroon-color);
+  margin: 30px 0;
 }
 
 /* Our Gallery Section */

@@ -10,6 +10,7 @@ a {
   --bg-black: #000;
   --primary-color: #c1a372;
   --golden-color: #6a4f2c;
+  --maroon-color: #631015;
 }
 
 .container {
@@ -34,12 +35,15 @@ body {
 .title2 {
   font-size: 45px;
   font-family: "Castoro Titling", serif;
+  color: var(--golden-color);
 }
 
 .subtitle {
   font-size: 20px;
   letter-spacing: 1.3px;
   text-transform: uppercase;
+  color: var(--maroon-color);
+  margin-bottom: 30px;
 }
 
 .primary-btn {
