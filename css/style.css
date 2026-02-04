@@ -466,7 +466,7 @@ header a,
 
 @media screen and (max-width: 1200px) {
   .support-links {
-    gap: 15px;
+    gap: 10px;
   }
   .nav-logo {
     position: static;
