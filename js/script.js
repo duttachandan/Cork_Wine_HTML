@@ -5,6 +5,19 @@ luxy.init({
   wrapperSpeed: 0.08,
 });
 
+// Loading screen fadeOff
+const loadingWrapper = document.querySelector(".loading-wrapper");
+
+$(document).ready(() => {
+  function clearLoading() {
+    $(".loader").fadeOut(1000);
+    $(".loading-wrapper").fadeOut(2000);
+    () => clearTimeout(clearLoading);
+  }
+
+  setTimeout(() => clearLoading(), 3000);
+});
+
 // Code of Subititle Section
 const subtitle = document.querySelector(".subtitle");
 const subtitleText = subtitle.textContent;
