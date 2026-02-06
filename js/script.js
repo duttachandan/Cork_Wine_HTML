@@ -19,29 +19,21 @@ $(document).ready(() => {
 
   // scroll controll
 
-  window.addEventListener("scroll", (e) => {
-    console.log(window.pageYOffset);
-    const prvScrollValue = window.pageYOffset;
+  let prevScroll = window.pageYOffset;
 
-    if (window.pageYOffset > 150) {
-      $("header").css({
-        transform: "translateY(-100%)",
-      });
+  window.addEventListener("resize", () => {
+    headerHeight = hdrTop.offsetHeight;
+  });
+
+  window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+    if (prevScroll < currentScroll) {
+      console.log("Scrolling Down");
+      $(".hdr-btm").removeClass("showhdr");
     } else {
-      $("header").css({
-        transform: "translateY(0)",
-      });
+      $(".hdr-btm").addClass("showhdr");
     }
-    const showHeader = () => {
-      if (prvScrollValue > window.pageYOffset) {
-        $("header").css({
-          transform: "translateY(-168px)",
-        });
-      }
-      clearInterval(() => showHeader());
-    };
-
-    setInterval(() => showHeader(), 0);
+    prevScroll = currentScroll;
   });
 });
 

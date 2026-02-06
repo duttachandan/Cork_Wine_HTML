@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sticky Dual Header</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset-ish */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Header wrapper */
+      #mainHeader {
+        width: 100%;
+        position: relative;
+        z-index: 999;
+      }
+
+      /* TOP HEADER */
+      .hdr-top {
+        background: #222;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+      }
+
+      /* BOTTOM HEADER */
+      .hdr-btm {
+        transition: top 0.3s ease;
+      }
+
+      /* States */
+      .header-collapsed .hdr-top {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      .header-collapsed .hdr-btm {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Prevent content jump */
+      .content {
+        padding-top: 120px; /* hdr-top + hdr-btm height */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="mainHeader">
+      <!-- TOP HEADER -->
+      <div class="hdr-top">
+        <div class="container">
+          <div class="d-flex flex-wrap gap-3 justify-content-between">
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#">📞 +91 99999 99999</a>
+              <a href="#">✉️ info@example.com</a>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HEADER -->
+      <div class="hdr-btm">
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mainOffcanvas"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="mainOffcanvas"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                ></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- DUMMY CONTENT -->
+    <main class="content">
+      <div class="container py-5">
+        <p>Scroll down to see header behavior.</p>
+        <div style="height: 2000px"></div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let lastScroll = 0;
+      const header = document.getElementById("mainHeader");
+      const threshold = document.querySelector(".hdr-top").offsetHeight;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > threshold) {
+          header.classList.add("header-collapsed");
+        } else {
+          header.classList.remove("header-collapsed");
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+  </body>
+</html>

@@ -337,7 +337,6 @@ body {
 
 header {
   background: var(--bg-black);
-  transition: 1s linear;
 }
 
 header .container {
@@ -466,6 +465,16 @@ header a,
   align-items: center;
 }
 
+.showhdr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 999;
+  transition: 1s linear;
+}
+
 @media screen and (max-width: 1200px) {
   .support-links {
     gap: 10px;
@@ -556,6 +565,12 @@ header a,
 
   .offcanvas-header .btn-close::before {
     transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hdr-top > .container > div {
+    justify-content: center !important;
   }
 }
 
