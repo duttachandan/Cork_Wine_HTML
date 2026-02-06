@@ -16,6 +16,33 @@ $(document).ready(() => {
   }
 
   setTimeout(() => clearLoading(), 3000);
+
+  // scroll controll
+
+  window.addEventListener("scroll", (e) => {
+    console.log(window.pageYOffset);
+    const prvScrollValue = window.pageYOffset;
+
+    if (window.pageYOffset > 150) {
+      $("header").css({
+        transform: "translateY(-100%)",
+      });
+    } else {
+      $("header").css({
+        transform: "translateY(0)",
+      });
+    }
+    const showHeader = () => {
+      if (prvScrollValue > window.pageYOffset) {
+        $("header").css({
+          transform: "translateY(-168px)",
+        });
+      }
+      clearInterval(() => showHeader());
+    };
+
+    setInterval(() => showHeader(), 0);
+  });
 });
 
 // Code of Subititle Section

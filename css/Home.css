@@ -97,6 +97,7 @@
 
 .winer-sec {
   padding: 120px 0;
+  background: var(--text-color);
 }
 
 .winer-sec .row {
@@ -172,6 +173,7 @@
 
 .duskwine-sec {
   padding: 120px 0;
+  background: var(--text-color);
 }
 
 .duskwine-img {
