@@ -1,7 +1,7 @@
 /* Banner Section */
 
 .banner-whole {
-  padding: var(--pad-bottom) 0 100px;
+  padding: 100px 0 100px;
   background: var(--bg-black);
 }
 
@@ -95,9 +95,13 @@
 
 /* Winery Section */
 
+.duskwine-winer-wrapper {
+  background: var(--text-color);
+}
+
 .winer-sec {
   padding: 120px 0;
-  background: var(--text-color);
+  background: var(--bg-pink);
 }
 
 .winer-sec .row {
@@ -171,8 +175,25 @@
 
 /* Duskwine Products Section */
 
-.duskwine-sec {
-  padding: 120px 0;
+.duskwine-sec,
+.deal-week {
+  background: var(--bg-pink);
+}
+
+.duskwine-sec > .container > .row {
+  padding-block: 80px;
+}
+
+.deal-week-wrapper > .row {
+  background: var(--text-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.deal-week-wrapper .col-lg-6 {
+  padding: 80px;
+}
+
+.duskwine-sec > div > div.row {
   background: var(--text-color);
 }
 
@@ -192,6 +213,34 @@
   font-family: "Castoro Titling", serif;
   color: var(--maroon-color);
   margin: 30px 0;
+}
+
+.tab {
+  border-bottom: 1px solid rgba(106, 79, 44, 0.2);
+  margin-bottom: 30px;
+}
+
+.tabs-swiper {
+  max-width: 300px;
+  margin: 0 auto 0 0;
+}
+
+.tabs-swiper .swiper-slide {
+  padding: 10px;
+  transition: 0.5s linear;
+}
+
+.tabs-swiper .swiper-slide.swiper-slide-thumb-active {
+  border-bottom: 1px solid var(--maroon-color);
+}
+
+.tabs-content {
+  margin-bottom: 30px;
+}
+
+.tabs-content .swiper-slide {
+  background: white;
+  height: 90px;
 }
 
 /* Our Gallery Section */
@@ -282,5 +331,11 @@
   }
   .winer-sml-img {
     max-width: 793px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .deal-week-wrapper > .row > .col-lg-6 {
+    padding: 15px;
   }
 }

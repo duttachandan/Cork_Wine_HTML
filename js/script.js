@@ -130,6 +130,21 @@ const partner_swiper = new Swiper(".partner-swiper", {
   // },
 });
 
+// Duskwine Products Section
+const tabsSwiper = new Swiper(".tabs-swiper", {
+  slidesPerView: 2,
+  centered: true,
+});
+
+const tabsContent = new Swiper(".tabs-content", {
+  slidesPerView: 1,
+  effect: "fade",
+  loop: true,
+  thumbs: {
+    swiper: tabsSwiper,
+  },
+});
+
 // Gallery Swiper Section
 const Gallery_Swiper = new Swiper(".our-gallery-swiper", {
   loop: true,
