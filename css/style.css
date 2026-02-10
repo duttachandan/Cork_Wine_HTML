@@ -448,18 +448,6 @@ header a,
   cursor: pointer;
 }
 
-.dropdown-link + .sub-lists {
-  position: absolute;
-  top: 100%;
-  background: #000000;
-  padding: 10px 20px;
-  display: none;
-}
-
-.dropdown-link:hover ~ ul.sub-lists,
-.sub-lists:hover {
-  display: block;
-}
 
 .offcanvas {
   flex-direction: row;
@@ -475,6 +463,7 @@ header a,
   z-index: 999;
   transition: 1s linear;
 }
+
 
 @media screen and (max-width: 1200px) {
   .support-links {
