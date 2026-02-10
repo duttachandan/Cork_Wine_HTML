@@ -8,6 +8,8 @@ luxy.init({
 // Loading screen fadeOff
 const loadingWrapper = document.querySelector(".loading-wrapper");
 
+document.getEle
+
 $(document).ready(() => {
   function clearLoading() {
     $(".loader").fadeOut(1000);
@@ -25,16 +27,16 @@ $(document).ready(() => {
     headerHeight = hdrTop.offsetHeight;
   });
 
-  window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
-    if (prevScroll < currentScroll) {
-      console.log("Scrolling Down");
-      $(".hdr-btm").removeClass("showhdr");
-    } else {
-      $(".hdr-btm").addClass("showhdr");
-    }
-    prevScroll = currentScroll;
-  });
+  // window.addEventListener("scroll", () => {
+  //   let currentScroll = window.pageYOffset;
+  //   if (prevScroll < currentScroll) {
+  //     console.log("Scrolling Down");
+  //     $(".hdr-btm").removeClass("showhdr");
+  //   } else {
+  //     $(".hdr-btm").addClass("showhdr");
+  //   }
+  //   prevScroll = currentScroll;
+  // });
 });
 
 // Code of Subititle Section
@@ -136,6 +138,7 @@ const tabsSwiper = new Swiper(".tabs-swiper", {
   centered: true,
 });
 
+// Tabs Content Section
 const tabsContent = new Swiper(".tabs-content", {
   slidesPerView: 1,
   effect: "fade",
