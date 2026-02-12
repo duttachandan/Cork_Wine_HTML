@@ -100,7 +100,7 @@
 }
 
 .winer-sec {
-  padding: 120px 0;
+  padding: 6.25vw 0;
   background: var(--bg-pink);
 }
 
@@ -243,10 +243,36 @@
   height: 90px;
 }
 
+/* Wine Details Section */
+
+.wine-details .row {
+  margin: 0;
+}
+
+.wine-details .row > * {
+  padding: 0;
+}
+
+.wine-details .title2,
+.wine-details .subtitle {
+  color: var(--text-color);
+}
+
+.deals-content {
+  background: #26310d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deals-content > div {
+  padding: 9.375vw 6.25vw;
+}
+
 /* Our Gallery Section */
 
 .our-gallery-sec {
-  padding: 120px 0;
+  padding: 6.25vw 0;
   text-align: center;
   background: var(--bg-black);
 }
